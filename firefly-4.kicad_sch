@@ -1,0 +1,163 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "312c2a80-deb4-4706-8717-38a47afd622e")
+	(paper "A4")
+	(title_block
+		(title "Root Layout")
+		(date "2025-02-17")
+		(rev "2.0")
+		(comment 1 "Matthew Guo")
+		(comment 2 "matthew@paisleymicro.com")
+		(comment 3 "Matthew Guo")
+		(comment 4 "matthew@paisleymicro.com")
+		(comment 5 "Firefly-4")
+		(comment 6 "PAISLEY-FC-4")
+		(comment 7 "2025")
+		(comment 8 "Firefly Automation Controller for RPi CM4")
+	)
+	(lib_symbols)
+	(text "USBC0, STM4500QTR, T1, PPS Fet"
+		(exclude_from_sim no)
+		(at 61.976 31.242 0)
+		(effects
+			(font
+				(face "Noto Mono")
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "0c10ccf8-a765-407c-b12a-b2d1a0257362")
+	)
+	(text "2x TPS54581\n- 8-60V -> 5V/5A\n- 8-60V -> 3.3V/5A"
+		(exclude_from_sim no)
+		(at 117.856 35.052 0)
+		(effects
+			(font
+				(face "Noto Mono")
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "6df3f655-d8f8-41ad-977b-71ad85481a94")
+	)
+	(sheet
+		(at 177.8 25.4)
+		(size 38.1 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0504389b-4257-4b6f-8ca2-c0f189099455")
+		(property "Sheetname" "Physical Configuration Switches"
+			(at 177.8 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "configuration.kicad_sch"
+			(at 177.8 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 25.4)
+		(size 76.2 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8b112e07-bafa-431c-8cf4-3c65129d9ea7")
+		(property "Sheetname" "Power Interfaces"
+			(at 25.4 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "powerInterfaces.kicad_sch"
+			(at 25.4 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 114.3 25.4)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b8fda84d-fd82-409c-92d4-257e29d956c6")
+		(property "Sheetname" "Power Converters"
+			(at 114.3 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "powerConverters.kicad_sch"
+			(at 114.3 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
