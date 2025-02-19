@@ -353,7 +353,7 @@
       "group_symbols": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Footprint"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -410,6 +410,50 @@
     [
       "b8fda84d-fd82-409c-92d4-257e29d956c6",
       "Power Converters"
+    ],
+    [
+      "2fa351be-36f2-417e-8f80-bb431b26e829",
+      "CM4 - LSI"
+    ],
+    [
+      "3f2b865a-389e-4b06-beb3-b29dfd92873b",
+      "ocscProtection"
+    ],
+    [
+      "a882a684-5bd7-4d52-8151-8c5d33c2118d",
+      "rtcWake"
+    ],
+    [
+      "51d590e4-625a-4661-9972-b060f3e701c2",
+      "CM4 - HSI"
+    ],
+    [
+      "e096cb43-3475-4309-a281-f2549db346b3",
+      "mtwo"
+    ],
+    [
+      "62253b14-830e-4d77-aa52-5cc2aeb39c09",
+      "MCU"
+    ],
+    [
+      "9307b5f5-c711-43ba-9134-7b1c31061119",
+      "ocscProtectionMcu"
+    ],
+    [
+      "e02b6343-7991-48d6-9d36-a088ce49a0ec",
+      "Expansion Buffers"
+    ],
+    [
+      "f19694cd-0be2-4c96-b1c2-6c01d25d7593",
+      "Onboard Communications"
+    ],
+    [
+      "37d36cf4-87da-4940-9b98-62cf22c2a210",
+      "USB Hub"
+    ],
+    [
+      "68cfbfb3-de20-423a-89c7-7705216f1746",
+      "IO Extension"
     ]
   ],
   "text_variables": {

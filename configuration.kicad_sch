@@ -382,10 +382,106 @@
 				)
 			)
 		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "power-flag"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(wire
 		(pts
-			(xy 68.58 38.1) (xy 68.58 40.64)
+			(xy 67.31 27.94) (xy 67.31 30.48)
 		)
 		(stroke
 			(width 0)
@@ -394,8 +490,32 @@
 		(uuid "404d62e3-9e3f-466f-b4c4-4880411cdbf7")
 	)
 	(rectangle
+		(start 16.51 82.55)
+		(end 281.94 113.03)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 7501b412-eea9-4106-83dc-d445537f5859)
+	)
+	(rectangle
+		(start 16.51 50.8)
+		(end 281.94 81.28)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ab78c939-732f-470c-a3a5-78fc770abd57)
+	)
+	(rectangle
 		(start 16.51 19.05)
-		(end 281.94 66.04)
+		(end 281.94 49.53)
 		(stroke
 			(width 0)
 			(type default)
@@ -405,49 +525,143 @@
 		)
 		(uuid b4f22fdd-027f-403a-9f29-0fceef9696a0)
 	)
-	(text "Enable USBC-PD power to supply PP_HV_MAIN"
+	(text "Enable buffering the SPI channel between SoM and MCU\nEnable buffering the UART channel between SoM and MCU\nLet USBC_VBUS trigger the USBC_PSNT (To direct USB2 to USBC)\nEnable USBC-PD power to supply PP_MAIN"
 		(exclude_from_sim no)
-		(at 114.3 46.228 0)
+		(at 90.424 32.512 0)
 		(effects
 			(font
+				(face "Noto Mono")
 				(size 1.27 1.27)
 			)
-		)
-		(uuid "3061b311-a355-48fa-95f3-d56347808f8e")
-	)
-	(text "Let USBC_VBUS trigger the USBC_PSNT"
-		(exclude_from_sim no)
-		(at 110.744 43.434 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4f6b396b-d35b-4394-bc3b-320d41d2f075")
-	)
-	(text "Enable buffering the UART channel between SoM and MCU"
-		(exclude_from_sim no)
-		(at 120.142 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "507601ae-efd2-4c98-a7cc-7db6ee091298")
-	)
-	(text "Enable buffering the SPI channel between SoM and MCU"
-		(exclude_from_sim no)
-		(at 119.38 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
+			(justify left)
 		)
 		(uuid "bb0c51e1-d019-47d4-9423-b5311c292d5e")
 	)
+	(text "Force USB2 Mode\nBoot Flash select\nSelect routing PCIe to B-key\nCH0 Interfaces I2C enable"
+		(exclude_from_sim no)
+		(at 91.186 64.77 0)
+		(effects
+			(font
+				(face "Noto Mono")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d69ceb6e-89aa-48c6-a990-96780688307a")
+	)
+	(global_label "PCIE_SEL_PULLUP"
+		(shape input)
+		(at 52.07 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "02b0ed79-cd9f-411c-921a-f10ea8c5b6c9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.212 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "en_spi_cm4"
+		(shape input)
+		(at 67.31 100.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "03715b7d-ced5-4bfe-9d6a-3c3f2535124b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 81.2413 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_PI"
+		(shape input)
+		(at 52.07 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0754e530-d2e2-416b-8587-2d94f9fd587a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 39.2272 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "en_spi_stm"
+		(shape input)
+		(at 67.31 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "16fb1070-9fed-45ec-9a27-ffafacf39a82")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80.697 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M2_SEL_B"
+		(shape input)
+		(at 67.31 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "331757a6-983b-414b-b4a3-622e8d494dce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 79.5479 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PP_3V3_MAIN"
 		(shape input)
-		(at 68.58 38.1 0)
+		(at 67.31 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -457,7 +671,29 @@
 		)
 		(uuid "3a53d4f2-cd87-4b14-a829-72f33bfcb7a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 84.0233 38.1 0)
+			(at 82.7533 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CH0EN"
+		(shape input)
+		(at 67.31 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "40dc0fc6-96fc-444c-be04-ef588a83613b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.5847 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -469,7 +705,7 @@
 	)
 	(global_label "FET_USBC_GATE_CTRL"
 		(shape input)
-		(at 53.34 45.72 180)
+		(at 52.07 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -479,7 +715,7 @@
 		)
 		(uuid "4b65088c-4be0-444d-b054-b816ddf28f93")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.1559 45.72 0)
+			(at 28.8859 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -491,7 +727,7 @@
 	)
 	(global_label "OE_SPI"
 		(shape input)
-		(at 53.34 38.1 180)
+		(at 52.07 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -501,7 +737,7 @@
 		)
 		(uuid "4c940648-f01b-4be0-b274-941320c9c171")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.8234 38.1 0)
+			(at 42.5534 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -513,7 +749,7 @@
 	)
 	(global_label "COM_USBC_PSNT"
 		(shape input)
-		(at 53.34 43.18 180)
+		(at 52.07 33.02 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -523,7 +759,29 @@
 		)
 		(uuid "6c9f6159-1b08-4ce0-a935-f8185c1412ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.5101 43.18 0)
+			(at 33.2401 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_MAIN"
+		(shape input)
+		(at 52.07 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "713215dd-edc5-4835-8728-617bfe6428bb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 36.6267 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -535,7 +793,7 @@
 	)
 	(global_label "HV_USBC_PSNT"
 		(shape input)
-		(at 68.58 43.18 0)
+		(at 67.31 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -545,7 +803,73 @@
 		)
 		(uuid "7943cbd8-65a6-402e-a829-3ff1eef290ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.7771 43.18 0)
+			(at 84.5071 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_MAIN"
+		(shape input)
+		(at 52.07 97.79 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "79ec957e-a408-43a3-87e6-9c9811377ce1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 36.6267 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "COM_USB_OTG_IDPI"
+		(shape input)
+		(at 67.31 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d205f0f-6e88-4766-842f-28e3e4a871c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 88.3776 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "nRPIBOOT"
+		(shape input)
+		(at 67.31 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "96e455b9-fd2a-4b47-8858-c0652e9b61c3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 79.4876 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -557,7 +881,7 @@
 	)
 	(global_label "OE_UART"
 		(shape input)
-		(at 53.34 40.64 180)
+		(at 52.07 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -567,7 +891,7 @@
 		)
 		(uuid "9ec80023-8a26-476f-b42a-60de09017e76")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.251 40.64 0)
+			(at 40.981 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -579,7 +903,7 @@
 	)
 	(global_label "FET_USBC_GATE"
 		(shape input)
-		(at 68.58 45.72 0)
+		(at 67.31 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -589,7 +913,117 @@
 		)
 		(uuid "ac810f27-988e-45cc-838d-96e041c7189b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.2608 45.72 0)
+			(at 84.9908 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_MAIN"
+		(shape input)
+		(at 52.07 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ae352833-4bab-4f6b-9259-addfe48128e7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 36.6267 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_PI"
+		(shape input)
+		(at 52.07 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d6cfbde0-637f-4d37-9a5f-8bf7822cb23b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 39.2272 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PP_3V3_MAIN"
+		(shape input)
+		(at 52.07 100.33 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dc8c560c-4232-4b2e-8bcb-80d5409dfc2b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 36.6267 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "en_i2c__stm"
+		(shape input)
+		(at 67.31 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fc3a7a93-570a-442e-b979-2fba69a91ee9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 81.7856 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "en_i2c_cm4"
+		(shape input)
+		(at 67.31 95.25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ffa35c28-43e4-4d0f-a443-0146ed8f383f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 81.3623 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -601,15 +1035,15 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_DIP_x04")
-		(at 60.96 40.64 180)
+		(at 59.69 95.25 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "be029bfe-ecef-4645-b632-ad59f4d54dc3")
-		(property "Reference" "SW1"
-			(at 60.96 52.705 0)
+		(uuid "83cffd53-902d-4afd-8a86-babe4a75e5e8")
+		(property "Reference" "SW5"
+			(at 59.69 107.315 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -617,7 +1051,7 @@
 			)
 		)
 		(property "Value" "SW_DIP_x04"
-			(at 60.96 50.165 0)
+			(at 59.69 104.775 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -625,7 +1059,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_Copal_CHS-04A_W5.08mm_P1.27mm_JPin"
-			(at 60.96 40.64 0)
+			(at 59.69 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -634,7 +1068,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 40.64 0)
+			(at 59.69 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -643,7 +1077,160 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 40.64 0)
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9000bd94-db26-4106-b423-265c071fe60c")
+		)
+		(pin "7"
+			(uuid "1b06e6c2-d471-41d5-a0c1-3410c88c07ed")
+		)
+		(pin "6"
+			(uuid "2d660cb1-da7b-4976-b00f-457c98c26328")
+		)
+		(pin "5"
+			(uuid "52df9b78-5700-4aaf-b2ab-08c8443724c7")
+		)
+		(pin "4"
+			(uuid "c90208af-9de3-4f60-8dbd-a35a7c3553e1")
+		)
+		(pin "2"
+			(uuid "5e0370e7-9335-4201-afb2-9728d5f29e2f")
+		)
+		(pin "8"
+			(uuid "2c00ca06-c664-47ac-a3bb-62b72d315f7b")
+		)
+		(pin "3"
+			(uuid "dc6a5272-f152-47cb-bf21-e43d3df5ba15")
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e/0504389b-4257-4b6f-8ca2-c0f189099455"
+					(reference "SW5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 52.07 63.5 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b2cb387-371d-44fe-9dbb-46747042357e")
+		(property "Reference" "#PWR035"
+			(at 45.72 63.5 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.99 63.5 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "58b531d2-969d-4060-aa81-49699711596a")
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e/0504389b-4257-4b6f-8ca2-c0f189099455"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 59.69 30.48 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be029bfe-ecef-4645-b632-ad59f4d54dc3")
+		(property "Reference" "SW1"
+			(at 59.69 42.545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_DIP_x04"
+			(at 59.69 40.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_Copal_CHS-04A_W5.08mm_P1.27mm_JPin"
+			(at 59.69 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -679,6 +1266,91 @@
 			(project "firefly-4"
 				(path "/312c2a80-deb4-4706-8717-38a47afd622e/0504389b-4257-4b6f-8ca2-c0f189099455"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 59.69 63.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d7af76ce-c7e0-452e-b3b8-4c05ce66e2c6")
+		(property "Reference" "SW2"
+			(at 59.69 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_DIP_x04"
+			(at 59.69 73.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_Copal_CHS-04A_W5.08mm_P1.27mm_JPin"
+			(at 59.69 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bdb07fe2-072f-4e27-9931-f1469f10e288")
+		)
+		(pin "7"
+			(uuid "d559dea4-2235-4b5e-a5fc-e72065bab901")
+		)
+		(pin "6"
+			(uuid "398d8b9f-301b-4c82-add8-dbaec57363dc")
+		)
+		(pin "5"
+			(uuid "c2c5c8e2-7def-4afa-98c1-aaaf22148c15")
+		)
+		(pin "4"
+			(uuid "49a819c8-5912-4e8e-a777-7940d04b3d4e")
+		)
+		(pin "2"
+			(uuid "96ddc4a0-237c-468f-b242-88ff3752ac23")
+		)
+		(pin "8"
+			(uuid "502eed06-9865-4cde-996b-76b5a675138c")
+		)
+		(pin "3"
+			(uuid "ceed8f88-cf4b-4ff3-aa82-3ba2978eed09")
+		)
+		(instances
+			(project "firefly-4"
+				(path "/312c2a80-deb4-4706-8717-38a47afd622e/0504389b-4257-4b6f-8ca2-c0f189099455"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
